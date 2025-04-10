@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -549,7 +548,6 @@ const SkillGapAnalysis = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="h-64 flex items-center justify-center">
-                        {/* Chart would go here */}
                         <div className="text-center">
                           <BarChart className="h-12 w-12 text-gray-300 mx-auto mb-3" />
                           <p className="text-gray-500">Activity chart will appear here as you progress</p>

@@ -8,20 +8,27 @@ import {
   PieChart
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  linkTo: string;
 }
 
-const FeatureCard = ({ icon, title, description }: FeatureCardProps) => (
-  <div className="feature-card">
+const FeatureCard = ({ icon, title, description, linkTo }: FeatureCardProps) => (
+  <div className="feature-card p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
     <div className="h-12 w-12 rounded-lg bg-careerpulse-blue/10 text-careerpulse-blue flex items-center justify-center mb-4">
       {icon}
     </div>
     <h3 className="text-lg font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
+    <p className="text-gray-600 mb-4">{description}</p>
+    <Link to={linkTo}>
+      <Button className="w-full">
+        Learn More
+      </Button>
+    </Link>
   </div>
 );
 
@@ -30,32 +37,38 @@ const FeatureSection = () => {
     {
       icon: <FileSpreadsheet className="h-6 w-6" />,
       title: "Resume Optimization",
-      description: "AI-powered resume analysis and optimization to match job descriptions and increase interview chances."
+      description: "AI-powered resume analysis and optimization to match job descriptions and increase interview chances.",
+      linkTo: "/resume-optimization"
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
       title: "Job Trend Analysis",
-      description: "Track industry trends, in-demand skills, and salary data to make informed career decisions."
+      description: "Track industry trends, in-demand skills, and salary data to make informed career decisions.",
+      linkTo: "/job-trend-analysis"
     },
     {
       icon: <MessageSquareText className="h-6 w-6" />,
       title: "AI Career Coaching",
-      description: "Get personalized advice, interview tips, and career guidance from our AI career assistant."
+      description: "Get personalized advice, interview tips, and career guidance from our AI career assistant.",
+      linkTo: "/ai-career-coaching"
     },
     {
       icon: <MailPlus className="h-6 w-6" />,
-      title: "Auto Email Outreach",
-      description: "AI-generated personalized emails to recruiters that highlight your relevant skills and experience."
+      title: "Email Outreach",
+      description: "AI-generated personalized emails to recruiters that highlight your relevant skills and experience.",
+      linkTo: "/email-outreach"
     },
     {
       icon: <BarChart3 className="h-6 w-6" />,
       title: "Application Tracking",
-      description: "Track all your job applications, interviews, and follow-ups in one centralized dashboard."
+      description: "Track all your job applications, interviews, and follow-ups in one centralized dashboard.",
+      linkTo: "/application-tracking"
     },
     {
       icon: <PieChart className="h-6 w-6" />,
       title: "Skills Gap Analysis",
-      description: "Identify missing skills and get recommendations for courses to become more competitive."
+      description: "Identify missing skills and get recommendations for courses to become more competitive.",
+      linkTo: "/skill-gap-analysis"
     }
   ];
 
@@ -76,6 +89,7 @@ const FeatureSection = () => {
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
+              linkTo={feature.linkTo}
             />
           ))}
         </div>
