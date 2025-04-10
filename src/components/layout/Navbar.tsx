@@ -1,11 +1,12 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="bg-white/90 backdrop-blur-sm sticky top-0 z-40 w-full border-b border-border">
@@ -13,16 +14,16 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-careerpulse-blue to-careerpulse-purple bg-clip-text text-transparent">CareerPulse</span>
-              <span className="ml-1 text-xs px-1.5 py-0.5 rounded bg-careerpulse-purple/10 text-careerpulse-purple">AI</span>
+              <span className="text-2xl font-bold gradient-text">CareerPulse</span>
+              <span className="ml-1 text-xs px-1.5 py-0.5 rounded bg-gray-200 text-gray-700">AI</span>
             </Link>
             <div className="hidden md:ml-10 md:flex items-center space-x-4">
-              <Link to="/features" className="nav-link">Features</Link>
-              <Link to="/pricing" className="nav-link">Pricing</Link>
+              <Link to="/features" className={`nav-link ${location.pathname === '/features' ? 'nav-link-active' : ''}`}>Features</Link>
+              <Link to="/pricing" className={`nav-link ${location.pathname === '/pricing' ? 'nav-link-active' : ''}`}>Pricing</Link>
               <div className="relative group">
-                <button className="nav-link flex items-center">
+                <Link to="/resources" className={`nav-link flex items-center ${['/resources', '/blog', '/guides', '/faq'].includes(location.pathname) ? 'nav-link-active' : ''}`}>
                   Resources <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
+                </Link>
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto">
                   <Link to="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Blog</Link>
                   <Link to="/guides" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Guides</Link>
@@ -33,12 +34,12 @@ const Navbar = () => {
           </div>
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/login">
-              <Button variant="ghost" className="text-gray-600 hover:text-careerpulse-blue">
+              <Button variant="ghost" className="text-gray-600 hover:text-black">
                 Log in
               </Button>
             </Link>
             <Link to="/register">
-              <Button className="bg-careerpulse-blue hover:bg-careerpulse-blue/90">
+              <Button className="bg-black hover:bg-gray-800">
                 Sign up free
               </Button>
             </Link>
@@ -70,7 +71,7 @@ const Navbar = () => {
                 <Button variant="outline" className="w-full">Log in</Button>
               </Link>
               <Link to="/register" className="block w-full">
-                <Button className="w-full bg-careerpulse-blue">Sign up</Button>
+                <Button className="w-full bg-black">Sign up</Button>
               </Link>
             </div>
           </div>

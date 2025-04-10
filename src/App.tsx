@@ -10,6 +10,10 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
+import Features from "./pages/Features";
+import Pricing from "./pages/Pricing";
+import Resources from "./pages/Resources";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +29,10 @@ const App = () => (
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/resume" element={<Resume />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

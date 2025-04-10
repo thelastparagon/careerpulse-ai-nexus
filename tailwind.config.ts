@@ -64,12 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				careerpulse: {
-					blue: '#2563eb',
-					green: '#10b981',
-					purple: '#8b5cf6',
-					"light-blue": '#60a5fa',
-					"light-green": '#34d399',
-					"light-purple": '#a78bfa'
+					blue: '#000000',
+					green: '#333333',
+					purple: '#666666',
+					"light-blue": '#999999',
+					"light-green": '#cccccc',
+					"light-purple": '#aaaaaa'
 				}
 			},
 			borderRadius: {
