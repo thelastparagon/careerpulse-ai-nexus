@@ -1,56 +1,11 @@
-# Welcome to your Lovable project
 
-## Project info
+# CareerPulse AI Project
 
-**URL**: https://lovable.dev/projects/743244fd-59e5-4a6b-b709-502b73056350
+## Project Overview
 
-## How can I edit this code?
+CareerPulse AI is an AI-powered career platform that helps job seekers optimize resumes, track job trends, and land their dream jobs through various intelligent tools.
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/743244fd-59e5-4a6b-b709-502b73056350) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
@@ -60,14 +15,49 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/743244fd-59e5-4a6b-b709-502b73056350) and click on Share -> Publish.
+Follow these steps to run the project locally:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-Yes it is!
+# Step 2: Navigate to the project directory.
+cd careerpulse-ai
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Step 3: Install the necessary dependencies.
+npm i
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+## Features
+
+- Resume Optimization: AI-powered resume analysis and optimization
+- Job Trend Analysis: Track industry trends and in-demand skills
+- AI Career Coaching: Get personalized career advice and guidance
+- Email Outreach: Generate personalized emails to recruiters
+- Application Tracking: Track all your job applications in one place
+- Skills Gap Analysis: Identify skills to develop for better job prospects
+
+## Deployment
+
+To deploy this project, build the production version:
+
+```sh
+npm run build
+```
+
+Then deploy the generated files in the `dist` directory to your preferred hosting service.
+
+## Custom Domain Setup
+
+To connect a custom domain to your deployed project:
+
+1. Purchase a domain from a domain registrar
+2. Set up DNS records to point to your hosting provider
+3. Configure your hosting service to use your custom domain
+4. Update SSL/TLS certificates for secure connections
+
